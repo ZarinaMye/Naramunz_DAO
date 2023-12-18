@@ -1,0 +1,4 @@
+smart kontrakt som hanterar förslag och röstning, mha ERC721 tokens
+deploya smart kontrakt lokalt o på sepholia test
+
+front-end som visar input för förslag, liggande förslag, aktuell röstningsresultat
