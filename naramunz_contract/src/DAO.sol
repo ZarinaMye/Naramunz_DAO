@@ -19,8 +19,16 @@ contract DAO {
 
     function createProposal(
         string memory title,
-        string memory description
+        string memory description,
+        address tokenAddress,
+        uint256 tokenId
     ) public {
+        ERC721 token = ERC721(tokenAddress);
+        require(
+            token.ownerOf(tokenId) == msg.sender,
+            "You do not own this token"
+        );
+
         proposals.push(Proposal(title, description, 0, 0));
     }
 
@@ -57,5 +65,5 @@ contract DAO {
     }
 }
 
-//Fungerar om man deployer med metamask och i samma konto/adress har sin nft som man ska rösta med
-//men borde inte alla kunna rösta, som har en nft....oavsett vem som deployar kontraktet...
+//Fungerar om man deployer med metamask och att skapa förslag med nft, samt rösta på förslag m nft.
+//Oavsett vem som åropar, så länge de äger nft fungerar det. Även rösträknadet fungerar.
