@@ -1,3 +1,7 @@
+1, have a contract controlled by a dao
+2, every transaction that the DAO wants to send has to be voted on
+3, we will use (erc20) -ERC721 tokens! for voting
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
