@@ -2,6 +2,7 @@
 pragma solidity ^0.8.19;
 
 // https://docs.openzeppelin.com/contracts/5.x/wizard
+// voting delay: 1 day, voting period 2 weeks, minst rösta 4%, timelock -helps people get out if they dont like a proposal
 
 import {Governor, IGovernor} from "@openzeppelin/contracts/governance/Governor.sol";
 import {GovernorSettings} from "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol";
@@ -9,6 +10,7 @@ import {GovernorCountingSimple} from "@openzeppelin/contracts/governance/extensi
 import {GovernorVotes, IVotes} from "@openzeppelin/contracts/governance/extensions/GovernorVotes.sol";
 import {GovernorVotesQuorumFraction} from "@openzeppelin/contracts/governance/extensions/GovernorVotesQuorumFraction.sol";
 import {GovernorTimelockControl, TimelockController} from "@openzeppelin/contracts/governance/extensions/GovernorTimelockControl.sol";
+import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyGovernor is
     Governor,
@@ -18,16 +20,34 @@ contract MyGovernor is
     GovernorVotesQuorumFraction,
     GovernorTimelockControl
 {
+    struct Proposal {
+        string description;
+        uint256 startBlock;
+        uint256 endBlock;
+        bool executed;
+    }
+
+    ERC721 public voteToken;
+
     constructor(
         IVotes _token,
         TimelockController _timelock
     )
         Governor("MyGovernor")
         GovernorSettings(7200 /* 1 day */, 100800 /* 2 week */, 0)
-        GovernorVotes(_token)
+        GovernorVotes(_votetoken)
         GovernorVotesQuorumFraction(4)
         GovernorTimelockControl(_timelock)
-    {}
+    {
+        voteToken = _voteToken;
+    }
+
+    //LÄGG TILL
+    //func för att rösta
+
+    //funcktion för att ge förslag
+
+    //func för att se alla förslag coh hu de är röstade på
 
     // The following functions are overrides required by Solidity.
 
