@@ -23,7 +23,7 @@ contract DeployContracts is Script {
 
 //I detta script skapas först en instans av GovToken-kontraktet. Sedan skapas en instans av MyGovernor-kontraktet, där GovToken-instansen används som argument till MyGovernor-konstruktorn.
 
-//För att köra detta script, kan du använda följande kommando:
+//För att köra detta script:
 
 //forge script DeployContracts --rpc-url https://eth-sepolia.g.alchemy.com/v2/<API_KEY> --private-key <PRIVATE_KEY> --broadcast
 //Ersätt <API_KEY> med din Alchemy API-nyckel och <PRIVATE_KEY> med din privata nyckel.
