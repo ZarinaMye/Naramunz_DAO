@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
-//pragma solidity ^0.8.19;
+pragma solidity ^0.8.19;
 
 ////TA BORT???
-
 
 // https://docs.openzeppelin.com/contracts/5.x/wizard
 // ERC721

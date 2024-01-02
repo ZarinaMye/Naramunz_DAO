@@ -13,7 +13,7 @@ contract MyGovernorTest is Test {
     MyGovernor governor;
     Box box;
     TimeLock timeLock;
-    GovToken govToken;
+    //GovToken govToken;
 
     //func test
 }

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.19;
 
 //forge install openzeppelin/openzeppelin-contracts --no-commit
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
