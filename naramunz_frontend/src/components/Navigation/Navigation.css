@@ -1,0 +1,57 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(222, 222, 222);
+  font-size: 14px;
+  padding: 26px;
+  font-weight: lighter;
+}
+
+nav ul li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #3b3613;
+  height: 100%;
+}
+
+@media only screen and (min-width: 850px) {
+  nav ul li {
+    margin-right: 100px;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+}
