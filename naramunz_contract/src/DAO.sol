@@ -65,5 +65,5 @@ contract DAO {
     }
 }
 
-//Fungerar om man deployer med metamask och att skapa förslag med nft, samt rösta på förslag m nft.
+//Fungerar i remix, om man deployer med metamask och att skapa förslag med nft, samt rösta på förslag m nft.
 //Oavsett vem som åropar, så länge de äger nft fungerar det. Även rösträknadet fungerar.
