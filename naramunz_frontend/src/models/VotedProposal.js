@@ -1,16 +1,14 @@
 export class VotedProposal  { 
-    id; //sätts vid listning av alla proposals, för att kunna hämta rätt proposal vid uppdatering
-    title;
-    description;
-    yesVotes;
-    noVotes;
+    proposalId; //ec hämta automatiskt vid klick på denna proposal
+    tokenAddress;
+    tokenId;
+    isFor; //boolean, ha en checkbox
    
-    constructor(id, title, description, yesVotes, noVotes) {
-      this.id = id;
-      this.title = title;
-      this.description = description;
-      this.yesVotes = yesVotes;
-      this.noVotes = noVotes;
+    constructor( proposalId, tokenAddress, tokenId, isFor) {
+      this.proposalId = proposalId;
+      this.tokenAddress = tokenAddress;
+      this.tokenId = tokenId;
+      this.isFor = isFor;
     };
   };
      

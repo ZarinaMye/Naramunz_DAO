@@ -58,7 +58,7 @@ export function BlockchainService() {
         }
         try {
             const accounts = await window.ethereum.request({ method: 'eth_accounts' });
-            const account = accounts[0]; // assuming the first account is the active one
+            const account = accounts[0]; // om det första kontot är det som ska användas...
             await contract.methods.createProposal
             (oneProposal.title, oneProposal.description, oneProposal.tokenAddress, oneProposal.tokenId )
             .send({ from: account })
