@@ -5,8 +5,8 @@ export function Welcome() {
     async function connectMetaMask() {
     if (window.ethereum) {
       try {
-        const accounts = await window.ethereum.send('eth_requestAccounts');
-        console.log(accounts);
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts'});
+        console.log('Konto kopplat:', accounts);
       } catch (error) {
         console.error(error);
       }

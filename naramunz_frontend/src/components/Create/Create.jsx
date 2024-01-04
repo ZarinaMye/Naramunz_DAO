@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './Create.css';
 import { BlockchainService } from '../../BlockchainService';
 import { OneProposal } from '../../models/OneProposal';
+import './Create.css';
+
 export function Create() {
 
     const {createProposal} = BlockchainService();
@@ -9,11 +10,11 @@ export function Create() {
  
     const handleChange = (e) => {
       setOneProposal({...oneProposal, [e.target.name]: e.target.value});
+      console.log(oneProposal); 
     };
  
     const handleSubmit = (e) => {
         e.preventDefault();
-       /* const {title, description} = oneProposal; */
         createProposal(oneProposal);
     };
  

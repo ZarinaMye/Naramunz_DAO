@@ -23,7 +23,7 @@ export function BlockchainService() {
     if (!account) {
         getAccounts();
     }
-    },    [account]);
+    },    [account]); 
 
    const updatedProposalList = async (contract) => {
        if (!contract) return;
@@ -36,17 +36,9 @@ export function BlockchainService() {
        setProposalList(proposalList);
        console.log(proposalList); 
        return proposalList;
-   }
+   } 
 
-   /* async function createProposal(oneProposal) {
-       await contract.methods.createProposal
-       (oneProposal.title, oneProposal.description)
-       .send({  from: window.ethereum.selectedAddress  })
-       .once("receipt", async (receipt) => {
-           await updatedProposalList(contract);
-       });
-    }; */
-    async function createProposal(oneProposal) {
+ /*    async function createProposal(oneProposal) {DENNA FUNKAR!!! men eth_account rekommenderas ist, se nedan
         if (!contract) {
             console.error('Contract is not defined');
             return;
@@ -57,6 +49,25 @@ export function BlockchainService() {
         .once("receipt", async (receipt) => {
             await updatedProposalList(contract);
         }); //nu loopar den här..
+     }; */
+
+     async function createProposal(oneProposal) {
+        if (!contract) {
+            console.error('Contract is not defined');
+            return;
+        }
+        try {
+            const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+            const account = accounts[0]; // assuming the first account is the active one
+            await contract.methods.createProposal
+            (oneProposal.title, oneProposal.description, oneProposal.tokenAddress, oneProposal.tokenId )
+            .send({ from: account })
+            .once("receipt", async (receipt) => {
+                await updatedProposalList(contract);
+            });
+        } catch (error) {
+            console.error(error);
+        }
      };
      
 
