@@ -1,38 +1,25 @@
+import React from 'react';
 import './Welcome.css';
-//import { useSDK } from '@metamask/sdk-react';
-//import React, { useState } from 'react';
-//npm install @metamask/sdk-react
-
 
 export function Welcome() {
-/*  const [account, setAccount] = useState();
- const { sdk, connected, chainId } = useSDK();
+    async function connectMetaMask() {
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.send('eth_requestAccounts');
+        console.log(accounts);
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      alert('Please install MetaMask!');
+      }
+    }
 
- const connect = async () => {
-    try {
-      const accounts = await sdk?.connect();
-      setAccount(accounts?.[0]);
-    } catch(err) {
-    console.warn(`failed to connect..`, err);
-  }
-  }; */
-
- return (
- <div>
-  <h1>Welcome to Naramunz</h1>
-  <p>This is a platform where everyone can propose ideas and vote on them.</p>
-  {/* <button style={{ padding: 10, margin: 10 }} onClick={connect}>
-    Connect
-  </button>
-  {connected && (
+    return (
     <div>
-      <>
-        {chainId && `Connected chain: ${chainId}`}
-        <p></p>
-        {account && `Connected account: ${account}`}
-      </>
+      <h1>Welcome to Naramunz</h1>
+      <p>This is a platform where everyone can propose ideas and vote on them.</p>
+      <button onClick={connectMetaMask}>Connect MetaMask</button>
     </div>
-  )} */}
- </div>
- );
-};
+    );
+}
