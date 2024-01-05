@@ -6,34 +6,28 @@ import {Vote} from './components/Vote/Vote';
 import {Create} from './components/Create/Create';
 
 
-export const router = createBrowserRouter([
-  {
+export const router = createBrowserRouter([{
 
-  path:"/",
-  element: <Layout />,
- /// errorElement: <NotFound />,
-  children: [
-      {
-          index: true,
-          path:"/",
-          element: <Welcome />
-      },
-      {
-        path:"/proposals",
-        element: <Proposals />
-      },
-      {
-        path:"/vote",
-        element: <Vote />
-      },
-      {
-        path:"/create_proposal",
-        element: <Create/>
-      },
-    
-      
-     
-      
-  ] 
-}
-]);
+    path:'/',
+    element: <Layout />,
+    /// errorElement: <NotFound />,
+    children: [
+        {
+            index: true,
+            path:'/',
+            element: <Welcome />
+        },
+        {
+           path:'/proposals',
+            element: <Proposals />
+        },
+        {
+            path:'/vote',
+            element: <Vote />
+        },
+        {
+            path:'/create_proposal',
+            element: <Create/>
+        },
+    ] 
+}]);
