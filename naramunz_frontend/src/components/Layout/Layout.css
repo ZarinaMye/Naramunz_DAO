@@ -1,8 +1,10 @@
 header {
-  height: 75px;
+    height: 75px;
 }
-  
+
 main {
-  min-height: 65vh;
+    min-height: 65vh;
+    background-color: rgb(28, 29, 31);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
-  
