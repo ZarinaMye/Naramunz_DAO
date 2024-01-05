@@ -30,7 +30,7 @@ export function BlockchainService() {
        let proposalIndexes = await contract.methods.getProposals().call();
        let proposalList = [];
        for (let i = 0; i < proposalIndexes.length; i++) {
-           let proposal = await contract.methods.proposals(proposalIndexes[i]).call();
+           let proposal = await contract.methods.proposals(i).call();
            proposalList.push(proposal);
        };
        setProposalList(proposalList);
