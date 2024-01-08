@@ -3,6 +3,7 @@ import { BlockchainService } from '../../BlockchainService';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import { VotedProposal } from '../../models/VotedProposal';
+import felorian from '../../img/felorian.png';
 //npm install react-bootstrap bootstrap
 
 export function Vote() {
@@ -40,6 +41,7 @@ export function Vote() {
                </li>
             ))}
             </ul>
+            <img className='felorian' src={felorian} alt="Felorian game character" />
          {/* GÖR OM TILL KOMPONENT ATT IMP  */}
           {/* <Modal show={showModal} onHide={handleClose}>
          <Modal.Header closeButton>

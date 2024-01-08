@@ -1,1 +1,14 @@
+.logga {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
 
+.feralith {
+    display: block;
+    position: absolute;
+    right: -5vw;
+    width: 25%;
+    bottom: 0;
+}

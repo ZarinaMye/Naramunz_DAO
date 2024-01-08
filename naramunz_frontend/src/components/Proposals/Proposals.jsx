@@ -1,5 +1,6 @@
 import './Proposals.css';
 import { BlockchainService } from '../../BlockchainService';
+import vulpian from '../../img/vulpian.png';
 
 export function Proposals() {
 
@@ -18,6 +19,7 @@ export function Proposals() {
                     </li>
                 ))}
             </ul>
+            <img className='vulpian' src={vulpian} alt="Vulpian game character" />
         </div>
     );
 };

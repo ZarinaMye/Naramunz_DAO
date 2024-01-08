@@ -1,4 +1,6 @@
 import React from 'react';
+import crystals_of_naramunz from '../../img/crystals_of_naramunz.png';
+import feralith from '../../img/feralith.png';
 import './Welcome.css';
 
 export function Welcome() {
@@ -17,9 +19,11 @@ export function Welcome() {
 
     return (
     <div>
-      <h1>Welcome to Naramunz</h1>
-      <p>This is a platform where everyone can propose ideas and vote on them.</p>
+      <img className='logga' src={crystals_of_naramunz} alt="Crystals of Naramunz logga" />
+      <h1>Welcome to our DAO !</h1>
+      <p>Here in our community everyone can propose ideas and vote on them, to help improve and develop the game.</p>
       <button onClick={connectMetaMask}>Connect MetaMask</button>
+      <img className='feralith' src={feralith} alt="Feralith game character" />
     </div>
     );
 }

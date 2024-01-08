@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BlockchainService } from '../../BlockchainService';
 import { OneProposal } from '../../models/OneProposal';
+import robo from '../../img/robo.png';
 import './Create.css';
 
 export function Create() {
@@ -63,6 +64,7 @@ export function Create() {
                 <button type='submit' className='btn'>Submit</button> 
                 <button type='button' onClick={handleCancel}>Cancel</button>          
             </form>      
+            <img className='robo' src={robo} alt="Game character" />
        </div>
    );
 };
