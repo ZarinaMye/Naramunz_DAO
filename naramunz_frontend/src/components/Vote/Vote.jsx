@@ -33,12 +33,14 @@ export function Vote() {
     return (
         <div>
             <h1>Vote here!</h1>
-            <ul> 
+            <ul className='proposalsVoteList'> 
             {proposalList.map((proposal, index) => (
-                <li key={index}>
-                    <h2>{proposal.title}</h2>
-                    <p>{proposal.description}</p>
-                    <button onClick={() => handleVoteClick(proposal)}>Vote</button>
+                <li className='itemVoteOn'key={index}>
+                    <div className="textContainer">
+                        <h3>{proposal.title}</h3>
+                        <p>{proposal.description}</p>
+                    </div>
+                    <button className='voteBtn' onClick={() => handleVoteClick(proposal)}>Vote</button>
                </li>
             ))}
             </ul>
