@@ -3,6 +3,7 @@ import { BlockchainService } from '../../BlockchainService';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import { VotedProposal } from '../../models/VotedProposal';
+import {VoteForm } from '../VoteForm//VoteForm';
 import felorian from '../../img/felorian.png';
 //npm install react-bootstrap bootstrap
 
@@ -41,6 +42,8 @@ export function Vote() {
                </li>
             ))}
             </ul>
+          <VoteForm /> 
+            {/* <VoteForm show={showModal} handleClose={handleClose} handleSubmit={handleSubmit} tokenAddress={tokenAddress} setTokenAddress={setTokenAddress} tokenId={tokenId} setTokenId={setTokenId} isFor={isFor} setIsFor={setIsFor} />  */}
             <img className='felorian' src={felorian} alt="Felorian game character" />
          {/* GÖR OM TILL KOMPONENT ATT IMP  */}
           {/* <Modal show={showModal} onHide={handleClose}>

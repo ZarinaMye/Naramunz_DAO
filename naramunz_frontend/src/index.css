@@ -1,15 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500&display=swap");
+
 body {
-    background-color: rgb(48, 45, 45);
+    background-color: rgba(2, 1, 1, 0.849);
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: "Eczar", serif;
     color: rgb(231, 231, 238);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    font-family: "Eczar", serif;
 }

@@ -5,10 +5,33 @@
     width: 25%;
 }
 
+.metaMbtn {
+    background-color: #646463;
+    border: solid rgb(133, 114, 106);
+    border-style: double;
+    border-radius: 35px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-family: "Eczar", serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.metaMbtn:hover {
+    background-color: #828380;
+    color: white;
+    transform: scale(1.1);
+}
+
 .feralith {
     display: block;
     position: absolute;
-    right: -5vw;
+    right: 3vw;
     width: 25%;
     bottom: 0;
 }
