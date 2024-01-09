@@ -29,7 +29,7 @@ export function Create() {
        <div>
             <h1>Give a proposal</h1>
             <form onSubmit={handleSubmit}>
-                <label>Title</label>
+                <label>Title </label>
                 <input
                    type='text'
                    value={oneProposal.title}
@@ -37,7 +37,7 @@ export function Create() {
                    name='title'
                    required
                 />
-                <label>Decsription</label>
+                <label>Decsription </label>
                 <input
                    type='text'
                    value={oneProposal.description}
@@ -45,7 +45,7 @@ export function Create() {
                    name='description'
                    required
                 />
-                <label>TokenAddress</label>
+                <label>TokenAddress </label>
                 <input
                    type='text'
                    value={oneProposal.tokenAddress}
@@ -53,7 +53,7 @@ export function Create() {
                    name='tokenAddress'
                    required
                 />
-                <label>TokenId</label>
+                <label>TokenId </label>
                 <input
                    type='text'
                    value={oneProposal.tokenId}

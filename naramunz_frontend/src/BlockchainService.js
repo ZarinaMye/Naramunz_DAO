@@ -75,7 +75,7 @@ export function BlockchainService() {
         }
     }
 
-    async function vote(votedPropsal) {
+    async function voteOnProposal(votedPropsal) {
         if (!contract) {
             console.error("Contract is not defined");
             return;
@@ -104,7 +104,7 @@ export function BlockchainService() {
     return {
         updatedProposalList,
         createProposal,
-        vote,
+        voteOnProposal,
         proposalList,
     };
 }
