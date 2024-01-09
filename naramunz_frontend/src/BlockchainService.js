@@ -75,9 +75,36 @@ export function BlockchainService() {
         }
     }
 
+    async function vote(votedPropsal) {
+        if (!contract) {
+            console.error("Contract is not defined");
+            return;
+        }
+        try {
+            const accounts = await window.ethereum.request({
+                method: "eth_accounts",
+            });
+            const account = accounts[0];
+            await contract.methods
+                .vote(
+                    votedPropsal.proposalId,
+                    votedPropsal.tokenAddress,
+                    votedPropsal.tokenId,
+                    votedPropsal.isFor
+                )
+                .send({ from: account })
+                .once("receipt", async (receipt) => {
+                    await updatedProposalList(contract);
+                });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     return {
         updatedProposalList,
         createProposal,
+        vote,
         proposalList,
     };
 }

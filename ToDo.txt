@@ -4,8 +4,8 @@ test till kontraktet?
 
 front-end som visar input för förslag, liggande förslag, aktuell röstningsresultat
 
-skriv project rapport
-gör pecha kucha
+skriv project rapport 17jan
+gör pecha kucha 17 jan
 gör en övergripande read me
 
 
