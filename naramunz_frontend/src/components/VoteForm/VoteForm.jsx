@@ -11,60 +11,73 @@ export function VoteForm({ proposal, onClose }) {
     const handleChange = (e) => {
         setVotedProposal({...votedProposal, [e.target.name]: e.target.value});
         console.log(votedProposal); 
-    };
+    }; 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const updatedProposal = new VotedProposal(proposal.id, votedProposal.tokenAddress, votedProposal.tokenId, isFor);
-        voteOnProposal(updatedProposal);
-        onClose();
+   /*  const handleChange = (e) => {
+        setVotedProposal((prevState) => ({...prevState, [e.target.name]: e.target.value}));
+        if (e.target.name === 'isFor') {
+            console.log(e.target.value);
+        }
+     };
+ */
+    const handleRadioChange = (e) => {
+        setIsFor(e.target.value === 'true');
     };
      
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        //const updatedProposal = new VotedProposal(proposal.id, votedProposal.tokenAddress, votedProposal.tokenId, isFor); 
+        voteOnProposal(votedProposal);
+        onClose();
+    };
+     
     const handleCancel = () => {
         setVotedProposal(
-            new VotedProposal(proposal.id, '', '', '',)
+            new VotedProposal('', '', '', '',)
         );
         onClose();
     }
- 
-
  
     return (
         <div>
             <h3>Vote on: {proposal.title}</h3>
             <form onSubmit={handleSubmit}>
-            
-
                 <label>TokenAddress: </label>
                 <input
                     type='text'
-                   value={votedProposal.tokenAddress}
-                   onChange={handleChange}
-                   name='tokenAddress'
-                   required
+                    value={votedProposal.tokenAddress}
+                    onChange={handleChange}
+                    name='tokenAddress'
+                    required
                 /> 
-                
-        
                 <label>TokenId: </label>
                 <input
                     type='number'
-                   value={votedProposal.tokenId}
-                   onChange={handleChange}
-                   name='tokenId'
-                   required
+                    value={votedProposal.tokenId}
+                    onChange={handleChange}
+                    name='tokenId'
+                    required
                 /> 
-                <label>
-                   For:
-                   <input type="radio" checked={isFor} 
-                   onChange={(e) => setIsFor(true)} 
-                   required
-                   />
-                </label>
-                <label>
-                   Against:
-                   <input type="radio" checked={!isFor} onChange={(e) => setIsFor(false)} />
-                </label>
+                <label>For: </label>
+                <input 
+                    type="radio" 
+                    checked={isFor} 
+                    onChange={handleRadioChange}
+                    name='isFor'
+                    value={true}  
+                    //required ???
+                />
+                <label>Against: </label>
+                <input 
+                    type="radio" 
+                    checked={!isFor} 
+                    onChange={handleRadioChange}
+                    name='isFor'
+                    value={false}  
+                   
+                />
+                
                 <button type="submit">Submit Vote</button>
                 <button type='button' onClick={handleCancel}>Cancel</button>
             </form>

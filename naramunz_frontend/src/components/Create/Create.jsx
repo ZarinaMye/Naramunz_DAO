@@ -20,6 +20,7 @@ export function Create() {
     };
  
     const handleCancel = () => {
+        //behövs denna??!
         setOneProposal(
             new OneProposal('', '', '', '',)
         );
