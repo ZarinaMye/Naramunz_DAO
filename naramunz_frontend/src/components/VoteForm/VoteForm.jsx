@@ -3,7 +3,34 @@ import { VotedProposal } from '../../models/VotedProposal'
 import { BlockchainService } from '../../BlockchainService'
 
 export function VoteForm({ proposal, onClose }) {
+    const {voteOnProposal} = BlockchainService();
+   const [isFor, setIsFor] = useState(true); 
+   const [votedProposal, setVotedProposal] = useState(new VotedProposal(proposal.id, '', '', isFor));
+ 
+   
+   const handleChange = (e) => {
+       setVotedProposal({...votedProposal, [e.target.name]: e.target.value});
+       /* console.log(votedProposal); */
+    }; 
 
+   const handleRadioChange = (e) => {
+       setIsFor(e.target.value === 'true');
+       setVotedProposal({...votedProposal, isFor: e.target.value === 'true'});
+   };
+
+   const handleSubmit = (e) => {
+       e.preventDefault();
+       voteOnProposal(votedProposal);
+       onClose();
+   };
+
+   const handleCancel = () => {
+       setVotedProposal(
+           new VotedProposal('', '', '', '',)
+       );
+       onClose();
+   }
+/* 
     const {voteOnProposal} = BlockchainService();
     const [isFor, setIsFor] = useState(true); 
     const [votedProposal, setVotedProposal] = useState(new VotedProposal(proposal.id, '', '', '',));
@@ -20,7 +47,7 @@ export function VoteForm({ proposal, onClose }) {
         }
      };
  */
-    const handleRadioChange = (e) => {
+   /* const handleRadioChange = (e) => {
         setIsFor(e.target.value === 'true');
     };
      
@@ -37,7 +64,7 @@ export function VoteForm({ proposal, onClose }) {
             new VotedProposal('', '', '', '',)
         );
         onClose();
-    }
+    } */
  
     return (
         <div>
@@ -53,13 +80,13 @@ export function VoteForm({ proposal, onClose }) {
                 /> 
                 <label>TokenId: </label>
                 <input
-                    type='number'
+                    type='text'
                     value={votedProposal.tokenId}
                     onChange={handleChange}
                     name='tokenId'
                     required
                 /> 
-                <label>For: </label>
+                 <label>For: </label>
                 <input 
                     type="radio" 
                     checked={isFor} 
@@ -77,7 +104,7 @@ export function VoteForm({ proposal, onClose }) {
                     value={false}  
                    
                 />
-                
+                 
                 <button type="submit">Submit Vote</button>
                 <button type='button' onClick={handleCancel}>Cancel</button>
             </form>
