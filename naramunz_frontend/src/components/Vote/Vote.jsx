@@ -22,14 +22,14 @@ export function Vote() {
     return (
         <div>
             <h1>Vote here!</h1>
-            <ul className='proposalsVoteList'> 
+            <ul className='centerWrapper'> 
                 {proposalList.map((proposal, index) => (
                     <li className='itemVoteOn'key={index}>
                         <div className="textContainer">
                             <h3>{proposal.title}</h3>
                             <p>{proposal.description}</p>
                         </div>
-                        <button className='voteBtn' onClick={() => handleVoteClick(proposal, index)}>Vote</button>
+                        <button className='smallBtn' onClick={() => handleVoteClick(proposal, index)}>Vote</button>
                     </li>
                 ))}
             </ul>

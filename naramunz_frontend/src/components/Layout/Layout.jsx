@@ -6,12 +6,12 @@ export function Layout() {
 
     return(
         <div className='wrapper'>
-        <header>
-            <Navigation />
+            <header>
+                <Navigation />
             </header>
-        <main>
-            <Outlet />
-        </main>
+            <main>
+                <Outlet />
+            </main>
         </div>
     );
 };

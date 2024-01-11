@@ -34,9 +34,10 @@ export function VoteForm({ proposal, proposalId, onClose }) {
     };
 
     return (
+        <div className='voteFormWrapper'>
         <div className='voteForm'>
             <h3>Vote on: {proposal.title}</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='voteFormInput'>
                {/*  <label>ProposalId: </label> */}
                 <input type="hidden" 
                     name="proposalId" 
@@ -45,6 +46,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
                 />
                 <label>TokenAddress: </label>
                 <input
+                    placeholder='Your ERC721 token address.'
                     type='text'
                     value={votedProposal.tokenAddress}
                     onChange={handleChange}
@@ -53,31 +55,37 @@ export function VoteForm({ proposal, proposalId, onClose }) {
                 /> 
                 <label>TokenId: </label>
                 <input
+                    placeholder='Your ERC721 token id.'
                     type='text'
                     value={votedProposal.tokenId}
                     onChange={handleChange}
                     name='tokenId'
                     required
                 /> 
-                 <label>For: </label>
-                <input 
-                    type="radio" 
-                    checked={isFor} 
-                    onChange={handleRadioChange}
-                    name='isFor'
-                    value={true}  
-                />
-                <label>Against: </label>
-                <input 
-                    type="radio" 
-                    checked={!isFor} 
-                    onChange={handleRadioChange}
-                    name='isFor'
-                    value={false}  
-                />
-                <button type="submit">Submit Vote</button>
-                <button type='button' onClick={handleCancel}>Cancel</button>
+                <div className='radioWrapper'>
+                    <label>For: </label>
+                    <input className='radioInput'
+                        type="radio" 
+                        checked={isFor} 
+                        onChange={handleRadioChange}
+                        name='isFor'
+                        value={true}  
+                    />
+                    <label>Against: </label>
+                    <input className='radioInput'
+                        type="radio" 
+                        checked={!isFor} 
+                        onChange={handleRadioChange}
+                        name='isFor'
+                        value={false}  
+                    />
+                </div>
+                <div className='btnWrapper'>
+                    <button type='submit' className='smallBtn' >Submit</button>
+                    <button type='button' onClick={handleCancel} className='smallBtn'>Cancel</button>
+                </div>
             </form>
+        </div>
         </div>
     );
 }

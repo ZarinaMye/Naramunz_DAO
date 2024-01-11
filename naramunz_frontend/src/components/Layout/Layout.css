@@ -19,3 +19,27 @@ h1 {
 h3 {
     font-weight: normal;
 }
+
+.smallBtn {
+    background-color: #646463;
+    border: solid rgb(133, 114, 106);
+    border-style: double;
+    border-radius: 40px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Eczar", serif;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-height: 55px;
+    max-width: 85px;
+}
+
+.smallBtn:hover {
+    background-color: #1839a7;
+    color: white;
+    transform: scale(1.2);
+}
