@@ -1,7 +1,6 @@
 import './Vote.css';
 import { BlockchainService } from '../../BlockchainService';
 import { useState } from 'react';
-/* import { VotedProposal } from '../../models/VotedProposal'; */
 import {VoteForm } from '../VoteForm//VoteForm';
 import felorian from '../../img/felorian.png';
 //npm install react-bootstrap bootstrap
@@ -10,9 +9,11 @@ export function Vote() {
     const { proposalList } = BlockchainService();
     const [showVoteForm, setShowVoteForm] = useState(false);
     const [selectedProposal, setSelectedProposal] = useState(null);
+    const [proposalId, setProposalId] = useState(null);
 
-    const handleVoteClick = (proposal) => {
+    const handleVoteClick = (proposal, id) => {
         setSelectedProposal(proposal);
+        setProposalId(id);
         setShowVoteForm(true);
     };
 
@@ -28,13 +29,12 @@ export function Vote() {
                         <h3>{proposal.title}</h3>
                         <p>{proposal.description}</p>
                     </div>
-                    <button className='voteBtn' onClick={() => handleVoteClick(proposal)}>Vote</button>
+                    <button className='voteBtn' onClick={() => handleVoteClick(proposal, index)}>Vote</button>
                </li>
             ))}
             </ul>
-            {showVoteForm && <VoteForm proposal={selectedProposal} onClose={handleCloseVoteForm} />}
+            {showVoteForm && <VoteForm proposal={selectedProposal} proposalId={proposalId} onClose={handleCloseVoteForm} />}
             <img className='felorian' src={felorian} alt="Felorian game character" />
-         
         </div>
     );
 };

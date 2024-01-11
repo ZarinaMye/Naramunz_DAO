@@ -26,8 +26,8 @@ export function Create() {
         );
     };
   
-   return (
-       <div>
+    return (
+        <div>
             <h1>Give a proposal</h1>
             <form onSubmit={handleSubmit}>
                 <label>Title </label>
@@ -66,6 +66,6 @@ export function Create() {
                 <button type='button' onClick={handleCancel}>Cancel</button>          
             </form>      
             <img className='robo' src={robo} alt="Game character" />
-       </div>
-   );
+        </div>
+    );
 };
