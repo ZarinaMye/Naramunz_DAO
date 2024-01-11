@@ -10,8 +10,8 @@ export function Create() {
     const [oneProposal, setOneProposal] = useState(new OneProposal('', '', '', '',));
  
     const handleChange = (e) => {
-      setOneProposal({...oneProposal, [e.target.name]: e.target.value});
-      console.log(oneProposal); 
+        setOneProposal({...oneProposal, [e.target.name]: e.target.value});
+        console.log(oneProposal); 
     };
  
     const handleSubmit = (e) => {

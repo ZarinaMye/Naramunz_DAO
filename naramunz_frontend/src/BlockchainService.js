@@ -36,19 +36,6 @@ export function BlockchainService() {
         return proposalList;
     };
 
-    /*    async function createProposal(oneProposal) {DENNA FUNKAR!!! men eth_account rekommenderas ist, se nedan
-        if (!contract) {
-            console.error('Contract is not defined');
-            return;
-        }
-        await contract.methods.createProposal
-        (oneProposal.title, oneProposal.description, oneProposal.tokenAddress, oneProposal.tokenId )
-        .send({ from: window.ethereum.selectedAddress })
-        .once("receipt", async (receipt) => {
-            await updatedProposalList(contract);
-        }); //nu loopar den här..
-     }; */
-
     async function createProposal(oneProposal) {
         if (!contract) {
             console.error("Contract is not defined");

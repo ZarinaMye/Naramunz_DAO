@@ -14,8 +14,8 @@ export function Proposals() {
                     <li className='proposalItem' key={index}>
                         <h3>{proposal.title}</h3>
                         <p>{proposal.description}</p>
-                        <p>Yes Votes: {proposal.yesVotes}</p>
-                        <p>No Votes: {proposal.noVotes}</p>
+                        <p>Yes Votes: {proposal.yesVotes.toString()}</p>
+                        <p>No Votes: {proposal.noVotes.toString()}</p>
                     </li>
                 ))}
             </ul>

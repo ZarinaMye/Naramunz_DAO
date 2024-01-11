@@ -1,8 +1,8 @@
 export class VotedProposal {
-    proposalId; //ec hämta automatiskt vid klick på denna proposal
+    proposalId;
     tokenAddress;
     tokenId;
-    isFor; //boolean, ha en checkbox
+    isFor;
 
     constructor(proposalId, tokenAddress, tokenId, isFor) {
         this.proposalId = proposalId;
