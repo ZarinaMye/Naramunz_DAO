@@ -51,3 +51,11 @@ h3 {
     margin-top: 2vh;
     gap: 2vw;
 }
+
+input {
+    background-color: rgba(255, 255, 255, 0.822);
+    margin-bottom: 1.5vh;
+    border-radius: 7px;
+    font-family: "Eczar", serif;
+    color: black;
+}

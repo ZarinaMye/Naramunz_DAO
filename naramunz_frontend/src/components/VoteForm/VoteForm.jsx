@@ -46,7 +46,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
                 />
                 <label>TokenAddress: </label>
                 <input
-                    placeholder='Your ERC721 token address.'
+                    placeholder='Enter your ERC721 token address.'
                     type='text'
                     value={votedProposal.tokenAddress}
                     onChange={handleChange}
@@ -55,7 +55,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
                 /> 
                 <label>TokenId: </label>
                 <input
-                    placeholder='Your ERC721 token id.'
+                    placeholder='Enter your ERC721 token id.'
                     type='text'
                     value={votedProposal.tokenId}
                     onChange={handleChange}

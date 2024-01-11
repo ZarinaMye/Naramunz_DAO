@@ -50,6 +50,7 @@ export function Create() {
                     />
                     <label>TokenAddress: </label>
                     <input
+                        placeholder='Enter your ERC721 token address.'
                         type='text'
                         value={oneProposal.tokenAddress}
                         onChange={handleChange}
@@ -58,6 +59,7 @@ export function Create() {
                     />
                     <label>TokenId: </label>
                     <input
+                      placeholder='Enter your ERC721 token id.'
                         type='text'
                         value={oneProposal.tokenId}
                         onChange={handleChange}
