@@ -5,15 +5,15 @@ import './Welcome.css';
 
 export function Welcome() {
     async function connectMetaMask() {
-    if (window.ethereum) {
-      try {
-        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts'});
-        console.log('Konto kopplat:', accounts);
-      } catch (error) {
-        console.error(error);
-      }
-    } else {
-      alert('Please install MetaMask!');
+      if (window.ethereum) {
+        try {
+            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts'});
+            console.log('Konto kopplat:', accounts);
+        }   catch (error) {
+            console.error(error);
+        }
+        } else {
+            alert('Please install MetaMask!');
       }
     }
 
@@ -22,7 +22,10 @@ export function Welcome() {
       <img className='logga' src={crystals_of_naramunz} alt="Crystals of Naramunz logga" />
       <h1 className='Welcome'>Welcome to our DAO !</h1>
       <p>Here in our community everyone can propose ideas and vote on them, to help develop and improve the game.</p>
-      <button className='metaMbtn'onClick={connectMetaMask}>Connect MetaMask</button>
+      <p>To see, create proposals and vote on proposals you need to connect to the site with MetaMask.</p>
+      <div className='btnWrapper'>
+        <button className='metaMbtn'onClick={connectMetaMask}>Connect MetaMask</button>
+      </div>
       <img className='feralith' src={feralith} alt="Feralith game character" />
     </div>
     );

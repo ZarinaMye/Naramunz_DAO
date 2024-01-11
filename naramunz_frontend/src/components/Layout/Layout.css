@@ -43,3 +43,11 @@ h3 {
     color: white;
     transform: scale(1.2);
 }
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    gap: 2vw;
+}

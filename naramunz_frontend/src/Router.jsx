@@ -5,7 +5,6 @@ import {Proposals} from './components/Proposals/Proposals';
 import {Vote} from './components/Vote/Vote';
 import {Create} from './components/Create/Create';
 
-
 export const router = createBrowserRouter([{
 
     path:'/',
