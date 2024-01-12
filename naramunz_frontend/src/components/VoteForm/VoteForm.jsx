@@ -3,7 +3,7 @@ import { useState } from "react"
 import { VotedProposal } from '../../models/VotedProposal'
 import { BlockchainService } from '../../BlockchainService'
 
-export function VoteForm({ proposal, proposalId, onClose }) {
+export function VoteForm({ proposal, proposalId, onClose, setIsVoteFormOpen }) {
     const {voteOnProposal} = BlockchainService();
     const [isFor, setIsFor] = useState(true); 
     const [votedProposal, setVotedProposal] = useState(new VotedProposal('', '', '', ''/* , 'isFor' */));
@@ -18,6 +18,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
         voteOnProposal(votedProposal);   
         console.log(votedProposal);         
         onClose();
+        setIsVoteFormOpen(false);
     };
 
     const handleCancel = () => {
@@ -25,6 +26,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
             new VotedProposal('', '', '', '',)
         );
         onClose();
+        setIsVoteFormOpen(false);
     };
 
     return (
