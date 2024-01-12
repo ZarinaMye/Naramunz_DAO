@@ -16,16 +16,10 @@ contract DeployDAO is Script {
     // anvil
     // ny terminal:
     // forge script script/DeployDAO.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
-
-    /* function run() public {
-        vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
-
-        // Deploy GovToken
-        GovToken govToken = new GovToken();
-
-        // Deploy MyGovernor
-        MyGovernor myGovernor = new MyGovernor(govToken, govToken);
-
-        vm.stopBroadcast();
-     */
 }
+/* 
+to deploy with terminal:
+source .env   
+forge script script/DeployDAO.s.sol --rpc-url $SEPHOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast
+
+mha Success Hash, sepholia etherscan kolla kontraktet */

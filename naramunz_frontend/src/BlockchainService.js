@@ -9,7 +9,6 @@ export function BlockchainService() {
 
     useEffect(() => {
         const getAccounts = async () => {
-            /*  await connectMetaMask(); */
             const web3 = new Web3(window.ethereum || "http://localhost:7545");
             const accountLoggedIn = await web3.eth.getAccounts();
             if (account !== accountLoggedIn[0]) {
@@ -31,11 +30,12 @@ export function BlockchainService() {
                     method: "eth_requestAccounts",
                 });
                 console.log("Konto kopplat:", accounts);
+                window.alert("MetaMask är redan ansluten");
             } catch (error) {
                 console.error(error);
             }
         } else {
-            window.alert("Anslut din MetaMask till sidan");
+            window.alert("Anslut MetaMask till sidan");
             connectMetaMask();
         }
     }
@@ -56,7 +56,7 @@ export function BlockchainService() {
     async function createProposal(oneProposal) {
         if (!contract) {
             console.error("Contract is not defined");
-            window.alert("Anslut din MetaMask till sidan");
+            window.alert("Anslut MetaMask till sidan");
             connectMetaMask();
             return;
         }
@@ -64,7 +64,7 @@ export function BlockchainService() {
             const accounts = await window.ethereum.request({
                 method: "eth_accounts",
             });
-            const account = accounts[0]; // om det första kontot är det som ska användas...
+            const account = accounts[0];
             await contract.methods
                 .createProposal(
                     oneProposal.title,
@@ -84,7 +84,7 @@ export function BlockchainService() {
     async function voteOnProposal(votedPropsal) {
         if (!contract) {
             console.error("Contract is not defined");
-            window.alert("Koppla MetaMask till sidan");
+            window.alert("Anslut MetaMask till sidan");
             return;
         }
         try {

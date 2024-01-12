@@ -33,8 +33,7 @@ export function Create() {
             if (!validAddress) {
                 window.alert("Ogiltig Ethereum-adress");
                 value = '';
-            } 
-
+            }; 
         };
         setOneProposal({...oneProposal, [e.target.name]: value});
     };

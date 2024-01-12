@@ -2,9 +2,7 @@ smart kontrakt som hanterar förslag och röstning, mha ERC721 tokens
 deploya smart kontrakt lokalt o på sepholia test
 test till kontraktet?
 
-front-end som visar input för förslag, liggande förslag, aktuell röstningsresultat
-
-lös vote, borde vara löst men nu verkar sepholia busy...så får felmeddelande i metamask. 
+kolla om redan röstat på proposal då ej rösta igen alert
 skriv project rapport 17jan
 gör pecha kucha 17 jan
 gör en övergripande read me
