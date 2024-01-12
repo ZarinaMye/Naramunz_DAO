@@ -26,8 +26,10 @@ export function Create() {
         );
     };
 
-    //Om metamask ej connected ge felmeddelande när de försköer submitta förslag
   //new character - Adding one more female character".
+  //Meet up Umeå - Have a meet up for dedicated players, to meet and greet in Umeå Sweden.
+  //Greater Boss - There is a need for a bigger and more unique Boss in the dungeons.
+  
     return (
         <div>
             <h1>Give a proposal</h1>

@@ -7,8 +7,25 @@ export function BlockchainService() {
     const [account, setAccount] = useState();
     const [contract, setContract] = useState();
 
+    // Add this part at the top of the file
+    async function connectMetaMask() {
+        if (window.ethereum) {
+            try {
+                const accounts = await window.ethereum.request({
+                    method: "eth_requestAccounts",
+                });
+                console.log("Konto kopplat:", accounts);
+            } catch (error) {
+                console.error(error);
+            }
+        } else {
+            alert("Please install MetaMask!");
+        }
+    }
+
     useEffect(() => {
         const getAccounts = async () => {
+            await connectMetaMask();
             const web3 = new Web3(window.ethereum || "http://localhost:7545");
             const accountLoggedIn = await web3.eth.getAccounts();
             if (account !== accountLoggedIn[0]) {
@@ -89,6 +106,7 @@ export function BlockchainService() {
     }
 
     return {
+        connectMetaMask,
         updatedProposalList,
         createProposal,
         voteOnProposal,

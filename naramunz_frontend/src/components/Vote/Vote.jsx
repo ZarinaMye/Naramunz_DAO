@@ -20,6 +20,8 @@ export function Vote() {
     const handleCloseVoteForm = () => {
         setIsVoteFormOpen(false);
     };
+
+    //Det går bar att rösta 1ggr / förslag från samma adress.
  
     return (
         <div>
