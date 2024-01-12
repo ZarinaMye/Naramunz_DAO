@@ -9,20 +9,23 @@ export function VoteForm({ proposal, proposalId, onClose }) {
     const [votedProposal, setVotedProposal] = useState(new VotedProposal('', '', '', ''/* , 'isFor' */));
 
     const handleChange = (e) => {
-        setVotedProposal({...votedProposal, [e.target.name]: e.target.value, proposalId: proposalId});
+        setIsFor(e.target.value === 'true');
+        setVotedProposal({...votedProposal, [e.target.name]: e.target.value, proposalId: proposalId, isFor: e.target.value === 'true'});
   /*    setVotedProposal({...votedProposal, proposalId: proposalId}); */
+        
         console.log(votedProposal); 
     }; 
 
-    const handleRadioChange = (e) => {
+  /*   const handleRadioChange = (e) => {
         setIsFor(e.target.value === 'true');
         setVotedProposal({...votedProposal, isFor: e.target.value === 'true'});
         console.log(votedProposal); 
-    };
+    }; */
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        voteOnProposal(votedProposal);           
+        voteOnProposal(votedProposal);   
+        console.log(votedProposal);         
         onClose();
     };
 
@@ -38,11 +41,9 @@ export function VoteForm({ proposal, proposalId, onClose }) {
         <div className='voteForm'>
             <h3>Vote on: {proposal.title}</h3>
             <form onSubmit={handleSubmit} className='voteFormInput'>
-               {/*  <label>ProposalId: </label> */}
                 <input type="hidden" 
                     name="proposalId" 
                     value={votedProposal.proposalId} 
-                    /* onChange={handleChange}   */
                 />
                 <label>TokenAddress: </label>
                 <input
@@ -67,7 +68,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
                     <input className='radioInput'
                         type="radio" 
                         checked={isFor} 
-                        onChange={handleRadioChange}
+                        onChange={handleChange}
                         name='isFor'
                         value={true}  
                     />
@@ -75,7 +76,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
                     <input className='radioInput'
                         type="radio" 
                         checked={!isFor} 
-                        onChange={handleRadioChange}
+                        onChange={handleChange}
                         name='isFor'
                         value={false}  
                     />

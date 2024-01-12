@@ -17,6 +17,7 @@ export function Create() {
     const handleSubmit = (e) => {
         e.preventDefault();
         createProposal(oneProposal);
+        console.log(oneProposal); 
     };
  
     const handleCancel = () => {
@@ -24,6 +25,8 @@ export function Create() {
             new OneProposal('', '', '', '',)
         );
     };
+
+    //Om metamask ej connected ge felmeddelande när de försköer submitta förslag
   
     return (
         <div>
