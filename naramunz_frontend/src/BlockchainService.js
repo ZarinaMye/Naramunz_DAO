@@ -7,7 +7,6 @@ export function BlockchainService() {
     const [account, setAccount] = useState();
     const [contract, setContract] = useState();
 
-    // Add this part at the top of the file
     async function connectMetaMask() {
         if (window.ethereum) {
             try {
