@@ -9,6 +9,15 @@ export function VoteForm({ proposal, proposalId, onClose, setIsVoteFormOpen }) {
     const [votedProposal, setVotedProposal] = useState(new VotedProposal('', '', '', ''/* , 'isFor' */));
 
     const handleChange = (e) => {
+        let value = e.target.value;
+        if (e.target.name === 'tokenAddress') {
+           
+            const validAddress = /^0x[a-fA-F0-9]{40}$/.test(value);
+            if (!validAddress) {
+                window.alert("Ogiltig Ethereum-adress");
+                value = '';
+            };
+        };
         setIsFor(e.target.value === 'true');
         setVotedProposal({...votedProposal, [e.target.name]: e.target.value, proposalId: proposalId, isFor: e.target.value === 'true'});
     }; 

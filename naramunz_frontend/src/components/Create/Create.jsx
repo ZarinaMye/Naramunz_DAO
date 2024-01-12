@@ -10,11 +10,36 @@ export function Create() {
     const [oneProposal, setOneProposal] = useState(new OneProposal('', '', '', '',));
  
     const handleChange = (e) => {
-        setOneProposal({...oneProposal, [e.target.name]: e.target.value});
-        console.log(oneProposal); 
+
+        let value = e.target.value;
+
+        if (e.target.name === 'title') {
+            if (value.length >= 20) {
+                window.alert("Maximalt antal tecken har nåtts.");
+                value = value.substring(0, 20);
+            };
+        };
+
+        if (e.target.name === 'description') {          
+            if (value.length >= 100) {
+                 window.alert("Maximalt antal tecken har nåtts.");
+                value = value.substring(0, 100);
+            };
+        };
+      
+        if (e.target.name === 'tokenAddress') {
+       
+            const validAddress = /^0x[a-fA-F0-9]{40}$/.test(value);
+            if (!validAddress) {
+                window.alert("Ogiltig Ethereum-adress");
+                value = '';
+            } 
+
+        };
+        setOneProposal({...oneProposal, [e.target.name]: value});
     };
  
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         createProposal(oneProposal);
         console.log(oneProposal); 
@@ -29,7 +54,7 @@ export function Create() {
   //new character - Adding one more female character".
   //Meet up Umeå - Have a meet up for dedicated players, to meet and greet in Umeå Sweden.
   //Greater Boss - There is a need for a bigger and more unique Boss in the dungeons.
-  
+
     return (
         <div>
             <h1>Give a proposal</h1>
@@ -39,15 +64,19 @@ export function Create() {
                     <input
                         placeholder='Give your proposal a title.'
                         type='text'
+                        pattern="[A-Za-z0-9 ]*"
+                        maxlength="20"
                         value={oneProposal.title}
                         onChange={handleChange}
                         name='title'
                         required
                     />
                     <label>Decsription: </label>
-                    <input
+                    <textarea className='description'
                         placeholder='Give your proposal a title.'
                         type='text'
+                        pattern="[A-Za-z0-9 ]*"
+                        maxlength="100"
                         value={oneProposal.description}
                         onChange={handleChange}
                         name='description'

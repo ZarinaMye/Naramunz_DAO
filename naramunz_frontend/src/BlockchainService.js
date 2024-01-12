@@ -7,24 +7,9 @@ export function BlockchainService() {
     const [account, setAccount] = useState();
     const [contract, setContract] = useState();
 
-    async function connectMetaMask() {
-        if (window.ethereum) {
-            try {
-                const accounts = await window.ethereum.request({
-                    method: "eth_requestAccounts",
-                });
-                console.log("Konto kopplat:", accounts);
-            } catch (error) {
-                console.error(error);
-            }
-        } else {
-            alert("Please install MetaMask!");
-        }
-    }
-
     useEffect(() => {
         const getAccounts = async () => {
-            await connectMetaMask();
+            /*  await connectMetaMask(); */
             const web3 = new Web3(window.ethereum || "http://localhost:7545");
             const accountLoggedIn = await web3.eth.getAccounts();
             if (account !== accountLoggedIn[0]) {
@@ -38,6 +23,22 @@ export function BlockchainService() {
             getAccounts();
         }
     }, [account]);
+
+    async function connectMetaMask() {
+        if (window.ethereum) {
+            try {
+                const accounts = await window.ethereum.request({
+                    method: "eth_requestAccounts",
+                });
+                console.log("Konto kopplat:", accounts);
+            } catch (error) {
+                console.error(error);
+            }
+        } else {
+            window.alert("Anslut din MetaMask till sidan");
+            connectMetaMask();
+        }
+    }
 
     const updatedProposalList = async (contract) => {
         if (!contract) return;
@@ -55,6 +56,8 @@ export function BlockchainService() {
     async function createProposal(oneProposal) {
         if (!contract) {
             console.error("Contract is not defined");
+            window.alert("Anslut din MetaMask till sidan");
+            connectMetaMask();
             return;
         }
         try {
@@ -81,6 +84,7 @@ export function BlockchainService() {
     async function voteOnProposal(votedPropsal) {
         if (!contract) {
             console.error("Contract is not defined");
+            window.alert("Koppla MetaMask till sidan");
             return;
         }
         try {
