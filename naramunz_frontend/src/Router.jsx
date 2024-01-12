@@ -4,12 +4,13 @@ import {Layout} from './components/Layout/Layout';
 import {Proposals} from './components/Proposals/Proposals';
 import {Vote} from './components/Vote/Vote';
 import {Create} from './components/Create/Create';
+import {NotFound} from './components/NotFound/NotFound';
 
 export const router = createBrowserRouter([{
 
     path:'/',
     element: <Layout />,
-    /// errorElement: <NotFound />,
+    errorElement: <NotFound />,
     children: [
         {
             index: true,

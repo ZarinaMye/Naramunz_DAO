@@ -27,7 +27,7 @@ export function Create() {
     };
 
     //Om metamask ej connected ge felmeddelande när de försköer submitta förslag
-  
+  //new character - Adding one more female character".
     return (
         <div>
             <h1>Give a proposal</h1>

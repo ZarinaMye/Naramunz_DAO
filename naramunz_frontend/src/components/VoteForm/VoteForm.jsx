@@ -11,16 +11,7 @@ export function VoteForm({ proposal, proposalId, onClose }) {
     const handleChange = (e) => {
         setIsFor(e.target.value === 'true');
         setVotedProposal({...votedProposal, [e.target.name]: e.target.value, proposalId: proposalId, isFor: e.target.value === 'true'});
-  /*    setVotedProposal({...votedProposal, proposalId: proposalId}); */
-        
-        console.log(votedProposal); 
     }; 
-
-  /*   const handleRadioChange = (e) => {
-        setIsFor(e.target.value === 'true');
-        setVotedProposal({...votedProposal, isFor: e.target.value === 'true'});
-        console.log(votedProposal); 
-    }; */
 
     const handleSubmit = (e) => {
         e.preventDefault();

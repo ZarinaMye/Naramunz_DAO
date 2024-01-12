@@ -4,7 +4,7 @@ test till kontraktet?
 
 front-end som visar input för förslag, liggande förslag, aktuell röstningsresultat
 
-lös vote!!!
+lös vote, borde vara löst men nu verkar sepholia busy...så får felmeddelande i metamask. 
 skriv project rapport 17jan
 gör pecha kucha 17 jan
 gör en övergripande read me
