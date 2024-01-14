@@ -6,7 +6,7 @@ import './Welcome.css';
 
 export function Welcome() {
 
-    const {connectMetaMask} = BlockchainService();
+    const {connectToMetaMask} = BlockchainService();
 
     return (
         <div>
@@ -15,7 +15,7 @@ export function Welcome() {
             <p>Here in our community everyone can propose ideas and vote on them, to help develop and improve the game.</p>
             <p>To see, create and vote on proposals you need to connect to the site with MetaMask.</p>
             <div className='btnWrapper'>
-                <button className='metaMbtn'onClick={connectMetaMask}>Connect MetaMask</button>
+                <button className='metaMbtn'onClick={connectToMetaMask}>Connect MetaMask</button>
             </div>
             <img className='feralith' src={feralith} alt="Feralith game character" />
         </div>

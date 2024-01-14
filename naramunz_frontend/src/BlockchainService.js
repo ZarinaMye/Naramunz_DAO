@@ -23,20 +23,20 @@ export function BlockchainService() {
         }
     }, [account]);
 
-    async function connectMetaMask() {
+    async function connectToMetaMask() {
         if (window.ethereum) {
             try {
                 const accounts = await window.ethereum.request({
                     method: "eth_requestAccounts",
                 });
-                console.log("Konto kopplat:", accounts);
-                window.alert("MetaMask är redan ansluten");
+                console.log("Address connected:", accounts);
+                window.alert("MetaMask is alraedy connected");
             } catch (error) {
                 console.error(error);
             }
         } else {
-            window.alert("Anslut MetaMask till sidan");
-            connectMetaMask();
+            window.alert("Connect MetaMask to the page");
+            connectToMetaMask();
         }
     }
 
@@ -56,8 +56,8 @@ export function BlockchainService() {
     async function createProposal(oneProposal) {
         if (!contract) {
             console.error("Contract is not defined");
-            window.alert("Anslut MetaMask till sidan");
-            connectMetaMask();
+            window.alert("Connect MetaMask to the page");
+            connectToMetaMask();
             return;
         }
         try {
@@ -84,8 +84,29 @@ export function BlockchainService() {
     async function voteOnProposal(votedPropsal) {
         if (!contract) {
             console.error("Contract is not defined");
-            window.alert("Anslut MetaMask till sidan");
+            window.alert("Connect MetaMask to the page");
             return;
+        }
+        try {
+            await contract.methods
+                .vote(
+                    votedPropsal.proposalId,
+                    votedPropsal.tokenAddress,
+                    votedPropsal.tokenId,
+                    votedPropsal.isFor
+                )
+                .estimateGas({ from: account });
+        } catch (error) {
+            if (
+                error.message.includes(
+                    "You have already voted on this proposal"
+                )
+            ) {
+                window.alert("You have already voted on this proposal");
+                return;
+            } else {
+                console.error(error);
+            }
         }
         try {
             const accounts = await window.ethereum.request({
@@ -109,7 +130,7 @@ export function BlockchainService() {
     }
 
     return {
-        connectMetaMask,
+        connectToMetaMask,
         updatedProposalList,
         createProposal,
         voteOnProposal,

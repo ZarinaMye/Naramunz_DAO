@@ -7,19 +7,13 @@ import {DAO} from "../src/DAO.sol";
 
 contract DeployDAO is Script {
     function run() external returns (DAO) {
-        vm.startBroadcast(); //vm cheat code in Foundry, forge - std
+        vm.startBroadcast();
         DAO dao = new DAO();
         vm.stopBroadcast();
         return dao;
-    } //forge script script/DeployDAO.s.sol  för att testa filen på tillfällig url -anvil
-    // för att deploya mha anvil, ge RPC_URL o private key från anvil:
-    // anvil
-    // ny terminal:
-    // forge script script/DeployDAO.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+    }
 }
-/* 
-to deploy with terminal:
-source .env   
-forge script script/DeployDAO.s.sol --rpc-url $SEPHOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast
 
-mha Success Hash, sepholia etherscan kolla kontraktet */
+// Deploy with terminal on Sepholia:
+// source .env
+// forge script script/DeployDAO.s.sol --rpc-url $SEPHOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast

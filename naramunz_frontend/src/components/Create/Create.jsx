@@ -50,7 +50,7 @@ export function Create() {
         );
     };
 
-  //new character - Adding one more female character".
+  //New character - Adding one more female character, for a richer narrative.
   //Meet up Umeå - Have a meet up for dedicated players, to meet and greet in Umeå Sweden.
   //Greater Boss - There is a need for a bigger and more unique Boss in the dungeons.
 

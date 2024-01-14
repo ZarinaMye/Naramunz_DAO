@@ -1,10 +1,42 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.19;
+/* pragma solidity ^0.8.19;
 
 import {Test} from "forge-std/Test.sol";
 import {DAO} from "../src/DAO.sol";
 import {ERC721} from "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+ */
+pragma solidity ^0.8.19;
+
+import {Test} from "forge-std/Test.sol";
+import {DAO} from "../src/DAO.sol";
+import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+contract TestDAO is Test {
+    DAO dao;
+    ERC721URIStorage token;
+
+    function setUp() public {
+        dao = new DAO();
+        token = new ERC721URIStorage("Test Token", "TT");
+        token.mint(address(this), 1);
+    }
+
+    function testCreateProposal() public {
+        dao.createProposal("Test Title", "Test Description", address(token), 1);
+        assertTrue(dao.getProposals().length == 1, "Proposal was not created");
+    }
+
+    function testVote() public {
+        dao.createProposal("Test Title", "Test Description", address(token), 1);
+        dao.vote(0, address(token), 1, true);
+        assertTrue(
+            dao.getProposals()[0].yesVotes == 1,
+            "Vote was not counted correctly"
+        );
+    }
+}
 
 /* contract DAOTest is Test {
     DAO public dao;
