@@ -1,7 +1,6 @@
 # Naramunz_DAO
 
 Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. This project comprises two primary components: **naramunz_contract** and **naramunz_frontend**.
-
 The Naramunz DAO empowers users to generate proposals and cast their votes. Each proposal includes a title, a detailed description, and a number of 'yes' and 'no' votes.
 
 The goal of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
@@ -69,7 +68,7 @@ To start the application, run the following command:
 `npm start`
 The application will then be available at http://localhost:3000.
 
-Please note that this application requires MetaMask to be installed and connected to the Sepholia testnet, and containning Sepholia ETH.
+Please note that this application requires MetaMask to be installed and connected to the Sepholia testnet, and containing Sepholia ETH.
 
 ## License
 
