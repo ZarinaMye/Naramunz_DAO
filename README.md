@@ -49,7 +49,7 @@ Please note that you only need to do this once. After the contract has been depl
 
 After deploying the contract, remember to update the DAO_ADDRESS in the config.js file in the **naramunz_frontend** folder with the new contract address.
 
-To run test: `forge test` or `forge test --vvv` for more infomation.
+To run test: `forge test` or `forge test --vvv` for more information.
 
 ## naramunz_frontend
 
