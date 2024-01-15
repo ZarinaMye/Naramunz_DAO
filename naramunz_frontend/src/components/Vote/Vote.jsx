@@ -20,8 +20,6 @@ export function Vote() {
     const handleCloseVoteForm = () => {
         setIsVoteFormOpen(false);
     };
-
-    //Det går bar att rösta 1ggr / förslag från samma adress.
  
     return (
         <div>
@@ -43,5 +41,5 @@ export function Vote() {
             <img className='felorian' src={felorian} alt="Felorian game character" />
         </div>
     );
-};
+}
  

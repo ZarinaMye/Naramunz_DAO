@@ -4,8 +4,6 @@ pragma solidity ^0.8.19;
 
 import {ERC721} from "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-//npm install @openzeppelin/contracts
-
 contract DAO {
     struct Proposal {
         string title;

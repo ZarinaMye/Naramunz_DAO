@@ -18,4 +18,4 @@ export function Layout() {
             </footer>
         </div>
     );
-};
+}

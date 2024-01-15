@@ -40,7 +40,9 @@ Clone this repo to your local machine.
 
 Install the OpenZeppelin library by running `npm install @openzeppelin/contracts` in the terminal.
 
-Before deploying the contract, you need to set up a .env file with your PRIVATE_KEY and SEPHOLIA_RPC_URL. These are required for the deployment process. For the Sepholia RPC URL, you can use an Alchemy node as a server and set up an application to obtain the RPC URL. Remember to use a **dummy private key**, never expose **one that has any value attached**.
+Before deploying the contract, you need to set up a .env file with your PRIVATE_KEY and SEPHOLIA_RPC_URL. These are required for the deployment process. For the Sepholia RPC URL, you can use an Alchemy node as a server and set up an application to obtain the RPC URL.
+
+**IMPORTANT!** Remember to use a **dummy private key**, never expose **one that has any value attached**.
 
 To deploy the contract, use the following command: `source .env` `forge script script/DeployDAO.s.sol --rpc-url $SEPHOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast`
 Please note that you only need to do this once. After the contract has been deployed, you don't need to repeat this step unless you want to redeploy the contract.

@@ -22,4 +22,4 @@ export function Proposals() {
             <img className='vulpian' src={vulpian} alt="Vulpian game character" />
         </div>
     );
-};
+}

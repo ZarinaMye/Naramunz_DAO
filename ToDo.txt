@@ -1,13 +1,6 @@
-smart kontrakt som hanterar förslag och röstning, mha ERC721 tokens
-deploya smart kontrakt lokalt o på sepholia test
-test till kontraktet?
-
 
 skriv project rapport 17jan
 gör pecha kucha 17 jan
-gör en övergripande read me
-
-
 
 
 Your dApp infrastructure

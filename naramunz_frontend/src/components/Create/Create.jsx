@@ -108,4 +108,4 @@ export function Create() {
             <img className='robo' src={robo} alt="Game character" />
         </div>
     );
-};
+}
