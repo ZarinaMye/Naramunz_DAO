@@ -1,10 +1,10 @@
 # Naramunz_DAO
 
-Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. Using a smart contract in Solidity with a React frontend, this project comprises two primary components: **naramunz_contract** and **naramunz_frontend**.
+Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. This project comprises two primary components: **naramunz_contract** and **naramunz_frontend**.
 
 The Naramunz DAO empowers users to generate proposals and cast their votes. Each proposal includes a title, a detailed description, and a number of 'yes' and 'no' votes.
 
-The DAO deploys on the Sepholia testnet, and the goal of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
+The goal of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
 
 This project is made as a learning process and part of a school assignment. Please ensure that the code aligns with your requirements and meets your security standards if you choose to utilize it.
 
@@ -14,8 +14,8 @@ The naramunz_contract directory contains smart contracts, created with Solidity 
 
 **Features & functions**
 
-`createProposal` Creates a new proposal. The user must be the owner of the ERC721 token she uses for creating a proposal.  
-`vote` Allows the user to vote on a specific proposal. The user must be the owner of the ERC721 token she uses for voting on a proposal.  
+`createProposal` Creates a new proposal. The user must be the owner of the ERC721 token that is used for creating a proposal.  
+`vote` Allows the user to vote on a specific proposal. The user must be the owner of the ERC721 token that is used for voting on a proposal.
 `getProposals` Returns all proposals.
 
 ## naramunz_frontend
