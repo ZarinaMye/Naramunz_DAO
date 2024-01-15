@@ -1,20 +1,20 @@
 # Naramunz_DAO
 
-Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. This project comprises two primary components: **naramunz_contract** and **naramunz_frontend**.
-The Naramunz DAO empowers users to generate proposals and cast their votes. Each proposal includes a title, a detailed description, and a number of 'yes' and 'no' votes.
+Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. This project contains two primary components: **naramunz_contract** and **naramunz_frontend**.
+The Naramunz DAO empowers users to generate proposals and cast their votes.
 
-The goal of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
+The aim of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
 
 This project is made as a learning process and part of a school assignment. Please ensure that the code aligns with your requirements and meets your security standards if you choose to utilize it.
 
 ## naramunz_contract
 
-The naramunz_contract directory contains smart contracts, created with Solidity and Foundry and deploys on Sepholia testnet. It uses the OpenZeppelin library to implement the ERC721 standard for non-fungible tokens (NFTs).
+The naramunz_contract directory contains smart contracts, created with Solidity and Foundry https://book.getfoundry.sh/ and deploys on Sepholia testnet. It uses the OpenZeppelin library to implement the ERC721 standard for non-fungible tokens (NFTs).
 
 **Features & functions**
 
-`createProposal` Creates a new proposal. The user must be the owner of the ERC721 token that is used for creating a proposal.  
-`vote` Allows the user to vote on a specific proposal. The user must be the owner of the ERC721 token that is used for voting on a proposal.
+`createProposal` Creates a new proposal. The user must be the owner of the ERC721 token that is used for creating a proposal. Each proposal includes a title, a description, and a number of 'yes' and 'no' votes.  
+`vote` Allows the user to vote on a specific proposal. The user must be the owner of the ERC721 token that is used for voting on a proposal.  
 `getProposals` Returns all proposals.
 
 ## naramunz_frontend
@@ -40,9 +40,9 @@ Clone this repo to your local machine.
 
 Install the OpenZeppelin library by running `npm install @openzeppelin/contracts` in the terminal.
 
-Before deploying the contract, you need to set up a .env file with your PRIVATE_KEY and SEPHOLIA_RPC_URL. These are required for the deployment process. For the Sepholia RPC URL, you can use an Alchemy node as a server and set up an application to obtain the RPC URL.
+Before deploying the contract, you need to set up a .env file with your PRIVATE_KEY and SEPHOLIA_RPC_URL. These are required for the deployment process. For the Sepholia RPC URL, you can use Alchemy node as a server https://www.alchemy.com/ and set up an application to obtain the RPC URL.
 
-**IMPORTANT!** Remember to use a **dummy private key**, never expose **one that has any value attached**.
+**IMPORTANT!** Remember to use a **dummy private key**, never expose one that has any value attached.
 
 To deploy the contract, use the following command: `source .env` `forge script script/DeployDAO.s.sol --rpc-url $SEPHOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast`
 Please note that you only need to do this once. After the contract has been deployed, you don't need to repeat this step unless you want to redeploy the contract.
