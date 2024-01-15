@@ -1,10 +1,16 @@
 # Naramunz_DAO
 
-Welcome to the Naramunz Decentralized Autonomous Organization (DAO) This project consists of two main components: **naramunz_contract** and **naramunz_frontend**. The Naramunz DAO allows users to create proposals and vote on them. Each proposal has a title, a description, and the number of yes and no votes.
+Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. Using a smart contract in Solidity with a React frontend, this project comprises two primary components: **naramunz_contract** and **naramunz_frontend**.
+
+The Naramunz DAO empowers users to generate proposals and cast their votes. Each proposal includes a title, a detailed description, and a number of 'yes' and 'no' votes.
+
+The DAO deploys on the Sepholia testnet, and the goal of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
+
+This project is made as a learning process and part of a school assignment. Please ensure that the code aligns with your requirements and meets your security standards if you choose to utilize it.
 
 ## naramunz_contract
 
-The naramunz_contract directory contains smart contracts, created with Solidity and Foundry and deployed on Sepholia testnet. It uses the OpenZeppelin library to implement the ERC721 standard for non-fungible tokens (NFTs).
+The naramunz_contract directory contains smart contracts, created with Solidity and Foundry and deploys on Sepholia testnet. It uses the OpenZeppelin library to implement the ERC721 standard for non-fungible tokens (NFTs).
 
 **Features & functions**
 
@@ -64,3 +70,7 @@ To start the application, run the following command:
 The application will then be available at http://localhost:3000.
 
 Please note that this application requires MetaMask to be installed and connected to the Sepholia testnet, and containning Sepholia ETH.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
