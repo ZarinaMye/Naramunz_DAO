@@ -4,7 +4,7 @@ Welcome to the Naramunz Decentralized Autonomous Organization (DAO) This project
 
 ## naramunz_contract
 
-The naramunz_contract directory contains smart contracts, created with Solidity and Foundry. It uses the OpenZeppelin library to implement the ERC721 standard for non-fungible tokens (NFTs).
+The naramunz_contract directory contains smart contracts, created with Solidity and Foundry and deployed on Sepholia testnet. It uses the OpenZeppelin library to implement the ERC721 standard for non-fungible tokens (NFTs).
 
 **Features & functions**
 
@@ -18,9 +18,9 @@ The naramunz_frontend directory contains the React application that serves as th
 
 **Features & functions**
 
-`connectToMetaMask` Allows users to connect their MetaMask wallets to the application.
-`fetchProposals` Fetches all proposals from the DAO and displays them.
-`createProposal` Users can create new proposals.
+`connectToMetaMask` Allows users to connect their MetaMask wallets to the application.  
+`fetchProposals` Fetches all proposals from the DAO and displays them.  
+`createProposal` Users can create new proposals.  
 `voteonProposal` Users can vote on existing proposals.
 
 # Installation
@@ -35,7 +35,7 @@ Clone this repo to your local machine.
 
 Install the OpenZeppelin library by running `npm install @openzeppelin/contracts` in the terminal.
 
-Before deploying the contract, you need to set up a .env file with your PRIVATE_KEY and SEPHOLIA_RPC_URL. These are required for the deployment process.For the Sepholia RPC URL, you can use an Alchemy node as a server and set up an application to obtain the RPC URL. Remember to use a **dummy private key**, never expose **one that has any value attached**.
+Before deploying the contract, you need to set up a .env file with your PRIVATE_KEY and SEPHOLIA_RPC_URL. These are required for the deployment process. For the Sepholia RPC URL, you can use an Alchemy node as a server and set up an application to obtain the RPC URL. Remember to use a **dummy private key**, never expose **one that has any value attached**.
 
 To deploy the contract, use the following command: `source .env` `forge script script/DeployDAO.s.sol --rpc-url $SEPHOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast`
 Please note that you only need to do this once. After the contract has been deployed, you don't need to repeat this step unless you want to redeploy the contract.
@@ -63,4 +63,4 @@ To start the application, run the following command:
 `npm start`
 The application will then be available at http://localhost:3000.
 
-Please note that this application requires MetaMask to be installed and connected to the Ethereum network.
+Please note that this application requires MetaMask to be installed and connected to the Sepholia testnet, and containning Sepholia ETH.
