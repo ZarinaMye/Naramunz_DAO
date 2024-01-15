@@ -1,4 +1,4 @@
-export const DAO_ADDRESS = "0xE30cf0c2154eD89C7CbfFEA9f1652c0Ce88907D7";
+export const DAO_ADDRESS = "0xF2186CBfD8D5A2400b2f978d784fF452C79F4341";
 export const DAO_ABI = [
     {
         inputs: [
@@ -151,4 +151,4 @@ export const DAO_ABI = [
     },
 ];
 
-//ABI taget från remix...
+//ABI taget från remix
