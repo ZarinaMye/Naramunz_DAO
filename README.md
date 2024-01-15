@@ -5,7 +5,7 @@ The Naramunz DAO empowers users to generate proposals and cast their votes.
 
 The aim of the project is to encouraging community engagement and decision-making within the game world. Decentralized governance for the Naramunz community is an attempt to ensure inclusivity and collective decision making in the game, which adds value by democratizing several key areas of the gaming industry.
 
-This project is made as a learning process and part of a school assignment. Please ensure that the code aligns with your requirements and meets your security standards if you choose to utilize it.
+This project is made as a learning process and part of a school assignment. Please ensure that the code aligns with your requirements and meets your security standards if you choose to use it.
 
 ## naramunz_contract
 
