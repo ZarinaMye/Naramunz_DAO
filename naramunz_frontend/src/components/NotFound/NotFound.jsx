@@ -5,7 +5,7 @@ export function NotFound() {
 
     return (
         <div>
-            <main>
+            <main className="notFoundMain">
                 <h1>404</h1>
                 <p>
                     Oh no! It seems like you've stumbled upon a page that doesn't exist...
