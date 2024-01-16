@@ -1,3 +1,5 @@
+![NaramunzDAO](./naramunz_frontend/src/img/NaramunzDAO.png)
+
 # Naramunz_DAO
 
 Welcome to the Naramunz Decentralized Autonomous Organization (DAO), a project that brings blockchain technology to the world of RPG games. This project contains two primary components: **naramunz_contract** and **naramunz_frontend**.
