@@ -63,7 +63,6 @@ export function Create() {
                     <input
                         placeholder='Give your proposal a title.'
                         type='text'
-                        /* pattern="[A-Za-z0-9 ]*" */
                         maxLength="20"
                         value={oneProposal.title}
                         onChange={handleChange}

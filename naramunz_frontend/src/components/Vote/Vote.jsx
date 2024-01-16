@@ -3,7 +3,6 @@ import { BlockchainService } from '../../BlockchainService';
 import { useState } from 'react';
 import {VoteForm } from '../VoteForm//VoteForm';
 import felorian from '../../img/felorian.png';
-//npm install react-bootstrap bootstrap
 
 export function Vote() {
     const { proposalList } = BlockchainService();

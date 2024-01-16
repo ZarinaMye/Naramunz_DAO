@@ -15,8 +15,8 @@ contract TestDAO is Test {
         DeployDAO deployer = new DeployDAO();
         dao = deployer.run();
 
-        token.mint(address(this), 1); // mint 1 token to this contract
-        token.transferFrom(address(this), address(this), 1); // transfer token to this contract
+        token.mint(address(this), 1);
+        token.transferFrom(address(this), address(this), 1);
     }
 
     function testCreateProposal() public {
