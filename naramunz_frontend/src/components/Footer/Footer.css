@@ -1,0 +1,13 @@
+.footerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 14vh;
+    gap: 5vw;
+}
+
+.icon {
+    color: rgba(107, 84, 74, 0.945);
+    max-height: 2.5vh;
+}

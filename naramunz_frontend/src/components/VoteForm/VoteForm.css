@@ -1,0 +1,58 @@
+.voteFormWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voteForm {
+    display: flex;
+    flex-direction: column;
+    min-width: 45vw;
+    min-height: 15vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(104, 90, 84, 0.1);
+    padding: 35px;
+    border-radius: 5px;
+    list-style: none;
+    border-bottom: solid 4px rgb(133, 114, 106);
+}
+
+.voteFormInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.radioWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin-top: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.radioInput {
+    appearance: none;
+    transform: scale(1.5);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.radioInput:checked {
+    background-color: rgb(133, 114, 106);
+    transform: scale(2.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.87);
+}
+
+.radioInput:checked::after {
+    content: "";
+    display: block;
+    width: 0.67em;
+    height: 0.67em;
+    margin: 0.185em auto;
+    border-radius: 50%;
+    background: white;
+}

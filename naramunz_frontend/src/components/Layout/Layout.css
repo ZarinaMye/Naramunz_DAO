@@ -1,0 +1,63 @@
+header {
+    height: 75px;
+}
+
+main {
+    min-height: 70vh;
+    background-color: rgb(27, 26, 32);
+    border-top: 2px solid rgba(107, 84, 74, 0.945);
+    border-bottom: 2px solid rgba(107, 84, 74, 0.945);
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+h1 {
+    color: rgb(133, 114, 106);
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.smallBtn {
+    background-color: #646463;
+    border: solid rgb(133, 114, 106);
+    border-style: double;
+    border-radius: 40px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Eczar", serif;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+    max-height: 55px;
+    max-width: 85px;
+}
+
+.smallBtn:hover {
+    background-color: #1839a7;
+    color: white;
+    transform: scale(1.2);
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    gap: 2vw;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.822);
+    margin-bottom: 1.5vh;
+    border-radius: 7px;
+    font-family: "Eczar", serif;
+    color: black;
+}

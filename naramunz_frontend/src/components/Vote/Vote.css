@@ -1,0 +1,28 @@
+.itemVoteOn {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(35% - 15px);
+    min-height: 22vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    padding-bottom: 20px;
+    margin: 15px;
+    border-radius: 5px;
+    list-style: none;
+    background-color: rgba(104, 90, 84, 0.1);
+    border-bottom: solid 4px rgb(133, 114, 106);
+}
+
+.voteBtn:hover {
+    background-color: #1839a7;
+    color: white;
+    transform: scale(1.2);
+}
+
+.felorian {
+    display: block;
+    position: absolute;
+    left: 4vw;
+    width: 25%;
+    bottom: 0;
+}

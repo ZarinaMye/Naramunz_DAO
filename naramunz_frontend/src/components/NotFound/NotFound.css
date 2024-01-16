@@ -1,0 +1,15 @@
+.roboNotFound {
+    display: block;
+    position: absolute;
+    left: 40vw;
+    width: 40%;
+    bottom: 2vh;
+}
+
+main {
+    margin-top: 75px;
+}
+
+a {
+    color: rgb(231, 231, 238);
+}

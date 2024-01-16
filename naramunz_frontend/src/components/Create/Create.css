@@ -1,0 +1,36 @@
+.proposalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    min-width: 40vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    list-style: none;
+    background-color: rgba(104, 90, 84, 0.1);
+    border-bottom: solid 4px rgb(133, 114, 106);
+    margin-bottom: 1vh;
+}
+
+.description {
+    height: 8vh;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+    background-color: rgba(255, 255, 255, 0.822);
+    margin-bottom: 1.5vh;
+    border-radius: 7px;
+    font-family: "Eczar", serif;
+    color: black;
+}
+
+.robo {
+    display: block;
+    position: absolute;
+    left: 4vw;
+    width: 25%;
+    bottom: 1.5vh;
+}
