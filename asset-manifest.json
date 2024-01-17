@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Naramunz_DAO/static/css/main.c0e210db.css",
-    "main.js": "/Naramunz_DAO/static/js/main.da179458.js",
-    "static/media/felorian.png": "/Naramunz_DAO/static/media/felorian.1babc4aa32901dcedf97.png",
-    "static/media/robo.png": "/Naramunz_DAO/static/media/robo.7aaadfecda1e8be78f4b.png",
-    "static/media/vulpian.png": "/Naramunz_DAO/static/media/vulpian.7d4ac33a42c5c63d9176.png",
-    "static/media/feralith.png": "/Naramunz_DAO/static/media/feralith.9af2d70eaa2267006e61.png",
-    "static/media/crystals_of_naramunz.png": "/Naramunz_DAO/static/media/crystals_of_naramunz.dca952d98fa66f463393.png",
-    "index.html": "/Naramunz_DAO/index.html",
-    "main.c0e210db.css.map": "/Naramunz_DAO/static/css/main.c0e210db.css.map",
-    "main.da179458.js.map": "/Naramunz_DAO/static/js/main.da179458.js.map"
+    "main.css": "/static/css/main.c0e210db.css",
+    "main.js": "/static/js/main.9177d2e7.js",
+    "static/media/felorian.png": "/static/media/felorian.1babc4aa32901dcedf97.png",
+    "static/media/robo.png": "/static/media/robo.7aaadfecda1e8be78f4b.png",
+    "static/media/vulpian.png": "/static/media/vulpian.7d4ac33a42c5c63d9176.png",
+    "static/media/feralith.png": "/static/media/feralith.9af2d70eaa2267006e61.png",
+    "static/media/crystals_of_naramunz.png": "/static/media/crystals_of_naramunz.dca952d98fa66f463393.png",
+    "index.html": "/index.html",
+    "main.c0e210db.css.map": "/static/css/main.c0e210db.css.map",
+    "main.9177d2e7.js.map": "/static/js/main.9177d2e7.js.map"
   },
   "entrypoints": [
     "static/css/main.c0e210db.css",
-    "static/js/main.da179458.js"
+    "static/js/main.9177d2e7.js"
   ]
 }
