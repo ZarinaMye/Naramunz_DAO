@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.19;
 
-import {Test} from "forge-std/Test.sol";
+import {Test} from "forge-std/test";
 import {DAO} from "../src/DAO.sol";
 import {DeployDAO} from "../script/DeployDAO.s.sol";
 import {MockERC721} from "../src/MockERC721.sol";
