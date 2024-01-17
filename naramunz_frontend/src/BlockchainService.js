@@ -97,12 +97,23 @@ export function BlockchainService() {
                 )
                 .estimateGas({ from: account });
         } catch (error) {
+            console.error(error);
             if (
                 error.message.includes(
                     "You have already voted on this proposal"
                 )
             ) {
                 window.alert("You have already voted on this proposal");
+                return;
+            } else if (error.message.includes("You do not own this token")) {
+                window.alert("You do not own this token");
+                return;
+            } else if (
+                error.message.includes(
+                    "ERC721: owner query for nonexistent token"
+                )
+            ) {
+                window.alert("The token does not exist");
                 return;
             } else {
                 console.error(error);
