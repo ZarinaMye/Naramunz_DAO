@@ -2,7 +2,7 @@
     "name": "naramunz_frontend",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://zarinamye.github.io/naramunz_frontend",
+    "homepage": "http://zarinamye.github.io/naramunz_frontend/",
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
