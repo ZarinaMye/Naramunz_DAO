@@ -6,7 +6,7 @@ import { BlockchainService } from '../../BlockchainService'
 export function VoteForm({ proposal, proposalId, onClose, setIsVoteFormOpen }) {
     const {voteOnProposal} = BlockchainService();
     const [isFor, setIsFor] = useState(true); 
-    const [votedProposal, setVotedProposal] = useState(new VotedProposal('', '', '', ''/* , 'isFor' */));
+    const [votedProposal, setVotedProposal] = useState(new VotedProposal('', '', '', ''));
 
     const handleChange = (e) => {
         let value = e.target.value;
