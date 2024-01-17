@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.c0e210db.css",
-    "main.js": "/static/js/main.9a665a9a.js",
-    "static/media/felorian.png": "/static/media/felorian.1babc4aa32901dcedf97.png",
-    "static/media/robo.png": "/static/media/robo.7aaadfecda1e8be78f4b.png",
-    "static/media/vulpian.png": "/static/media/vulpian.7d4ac33a42c5c63d9176.png",
-    "static/media/feralith.png": "/static/media/feralith.9af2d70eaa2267006e61.png",
-    "static/media/crystals_of_naramunz.png": "/static/media/crystals_of_naramunz.dca952d98fa66f463393.png",
-    "index.html": "/index.html",
-    "main.c0e210db.css.map": "/static/css/main.c0e210db.css.map",
-    "main.9a665a9a.js.map": "/static/js/main.9a665a9a.js.map"
+    "main.css": "/naramunz_frontend/static/css/main.c0e210db.css",
+    "main.js": "/naramunz_frontend/static/js/main.3689e1ef.js",
+    "static/media/felorian.png": "/naramunz_frontend/static/media/felorian.1babc4aa32901dcedf97.png",
+    "static/media/robo.png": "/naramunz_frontend/static/media/robo.7aaadfecda1e8be78f4b.png",
+    "static/media/vulpian.png": "/naramunz_frontend/static/media/vulpian.7d4ac33a42c5c63d9176.png",
+    "static/media/feralith.png": "/naramunz_frontend/static/media/feralith.9af2d70eaa2267006e61.png",
+    "static/media/crystals_of_naramunz.png": "/naramunz_frontend/static/media/crystals_of_naramunz.dca952d98fa66f463393.png",
+    "index.html": "/naramunz_frontend/index.html",
+    "main.c0e210db.css.map": "/naramunz_frontend/static/css/main.c0e210db.css.map",
+    "main.3689e1ef.js.map": "/naramunz_frontend/static/js/main.3689e1ef.js.map"
   },
   "entrypoints": [
     "static/css/main.c0e210db.css",
-    "static/js/main.9a665a9a.js"
+    "static/js/main.3689e1ef.js"
   ]
 }
